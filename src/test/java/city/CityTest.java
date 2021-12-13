@@ -41,7 +41,7 @@ class CityTest {
         assertEquals(120, city.getBuildings().get(0).getArea());
     }
 
-    /*@Test
+    @Test
     void testAddBuildingOverArea() {
         City city = new City("Budapest", 500);
 
@@ -51,7 +51,7 @@ class CityTest {
         IllegalArgumentException iae = assertThrows(IllegalArgumentException.class, () -> city.addBuilding(new Home(81, new Address("Rákóczi", 14))));
 
         assertEquals("City can't be larger than 500", iae.getMessage());
-    }*/
+    }
 
 
     @Test

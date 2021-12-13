@@ -65,7 +65,7 @@ public class City {
     public List<Building> findBuildingsByStreet(String street) {
         List<Building> result = new ArrayList<>();
         for (Building item : buildings) {
-            if (item.getAddress().equals(street)) {
+            if (street.equals(item.getAddress())) {
                 result.add(item);
             }
         }
