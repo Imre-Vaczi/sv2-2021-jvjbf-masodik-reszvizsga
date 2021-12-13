@@ -14,7 +14,6 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class HumanFileManagerTest {
-
     @TempDir
     File tempFolder;
 
@@ -24,7 +23,6 @@ class HumanFileManagerTest {
 
         assertEquals(0, hfm.getHumans().size());
     }
-
     @Test
     void readFileTest() {
         HumanFileManager hfm = new HumanFileManager();

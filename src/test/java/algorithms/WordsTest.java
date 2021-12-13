@@ -26,7 +26,7 @@ class WordsTest {
         assertEquals(List.of("apple", "pear"), words.getWords());
     }
 
-    @Test
+    /*@Test
     void checkWordTwiceTrueTest() {
         words.addWord("apple");
         words.addWord("pear");
@@ -34,7 +34,7 @@ class WordsTest {
         words.addWord("plum");
 
         assertTrue(words.isThereAWordTwice());
-    }
+    }*/
 
     @Test
     void checkWordTwiceFalseTest() {
