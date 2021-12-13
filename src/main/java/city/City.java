@@ -14,12 +14,42 @@ public class City {
         this.fullArea = fullArea;
     }
 
+    public void addBuilding(Building building) {
+        if (getActualOccLevel() + building.getArea() > fullArea) {
+            throw new IllegalArgumentException();
+        } else {
+            buildings.add(building);
+        }
+    }
+
+    public Building findHighestBuilding() {
+        Building result = buildings.get(0);
+        for (Building item : buildings) {
+            if (item.getLevels() > result.getLevels()) {
+                result = item;
+            }
+        }
+        return result;
+    }
+
+    public List<Building> getBuildings() {
+        return buildings;
+    }
+
     public String getName() {
         return name;
     }
 
     public long getFullArea() {
         return fullArea;
+    }
+
+    private long getActualOccLevel() {
+        long result = 0;
+        for (Building item : buildings) {
+            result += item.getArea();
+        }
+        return result;
     }
 
     public Building findHighestBuildingInCity() {

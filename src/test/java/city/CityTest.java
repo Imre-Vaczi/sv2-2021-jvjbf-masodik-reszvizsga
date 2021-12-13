@@ -22,16 +22,16 @@ class CityTest {
         city.addBuilding(new Office(222, 9, new Address("Üllői", 1), "LG", 56));
     }
 
-    /*@Test
+    @Test
     void createCity() {
         City city = new City("Budapest", 300000L);
 
         assertEquals("Budapest", city.getName());
         assertEquals(300000L, city.getFullArea());
         assertEquals(0, city.getBuildings().size());
-    }*/
+    }
 
-    /*@Test
+    @Test
     void testAddBuilding() {
         City city = new City("Budapest", 300000L);
 
@@ -39,7 +39,7 @@ class CityTest {
 
         assertEquals(1, city.getBuildings().size());
         assertEquals(120, city.getBuildings().get(0).getArea());
-    }*/
+    }
 
     /*@Test
     void testAddBuildingOverArea() {
@@ -54,15 +54,15 @@ class CityTest {
     }*/
 
 
-    /*@Test
+    @Test
     void findHighestBuildingInCityTest() {
         Building building = city.findHighestBuilding();
 
         assertEquals(10, building.getLevels());
         assertEquals(220, building.getArea());
-    }*/
+    }
 
-    /*@Test
+    @Test
     void findBuildingsByStreetTest() {
 
         List<Building> result = city.findBuildingsByStreet("Kossuth");
@@ -70,11 +70,11 @@ class CityTest {
         assertEquals(2, result.size());
         assertEquals(6, result.get(0).getAddress().getBuildingNumber());
         assertEquals(11, result.get(1).getAddress().getBuildingNumber());
-    }*/
+    }
 
-    /*@Test
+    @Test
     void testIsThereBuildingWithMorePeopleThan() {
         assertTrue(city.isThereBuildingWithMorePeopleThan(494));
         assertFalse(city.isThereBuildingWithMorePeopleThan(496));
-    }*/
+    }
 }
